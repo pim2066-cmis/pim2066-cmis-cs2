@@ -13,9 +13,9 @@ heightrect = 9
 myagemonths = myage + 17
 #this variable is for my age in months
 lifeexpectancy = 74.72
-#this variable is for the life expectancy in thailand
+#this variable is for the life expectancy in Thailand
 daysleft = lifeexpectancy - myage
-#this variable is for the days lef in my life
+#this variable is for the days elf in my life
 feet = 3.28084
 #this variable is for one feet in one meter
 heightfeet = myheight * feet
@@ -35,9 +35,9 @@ volumesquare = side1square * side1square * side1square / 2
 areaninthinrec = (lenghtrect * heightrect) / 9
 #this variable is for the one-ninth area of a rectangle
 
-print "Hello, my name is " + str(myname) +"." + " and I am " + str(myage) + " years old " + "." + " That means that I have about " + str(daysleft) + "from the life expectancy of Thailand, which is " + str(lifeexpectancy) + "." + " My height is " + str(myheight) + " which is about " + str(myaverage) + " taller than the thai girls my age."
+print "Hello, my name is " + str(myname) +"." + " and I am " + str(myage) + " years old " + "." + " That means that I have about " + str(daysleft) + "from the life expectancy of Thailand, which is " + str(lifeexpectancy) + "." + " My height is " + str(myheight) + " which is about " + str(myaverage) + " taller than the Thai girls my age."
 
-print "The unit of a cube is ", side1square, " inches long.", " The area of one side of the cube is ", areasquare, ".", " The volume of the square would be ", volumesquare, ". We have a rectangle that have the height of ", heightrect, " inches and the lenght of ", lenghtrect, ". The one-ninth of the rectangle is ", areaninthinrec, "." 
+print "The unit of a cube is ", side1square, " inches long.", " The area of one side of the cube is ", areasquare, ".", " The volume of the square would be ", volumesquare, ". We have a rectangle that have the height of ", heightrect, " inches and the length of ", lenghtrect, ". The one-ninth of the rectangle is ", areaninthinrec, "." 
 
 smile = ":)" * 10000
 #this variable is for 10000 :) 
