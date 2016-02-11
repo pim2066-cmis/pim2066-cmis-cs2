@@ -38,11 +38,15 @@ def mul(fourth, pi, radius, radius1, radius2):
 volume20 = mul(4/3, 3.14159265359, 20, 20, 20)
 
 def div(volume10, volume20, two):
-	return volume10 * volume20 * two
+	return (volume10 + volume20) / two
 avgvolume = div( float(volume10), float(volume20), 2)
 
+def mul(side1, side2, half, sin):
+	return side1 * side2 * half * sinC
+area_tri = mul(0.5, 6, 8, sin)
 
-print avgvolume
+print area_tri
+
 
 
 
