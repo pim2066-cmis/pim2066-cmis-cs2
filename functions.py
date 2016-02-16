@@ -50,7 +50,7 @@ def area(a,b,c):
 	return math.sqrt(x*(x-a)*(x-b)*(x-c))
 print area(1,2,2.5)
 
-print tri_area
+
 
 
 
