@@ -1,62 +1,62 @@
 import math
 def add(a, b):	        
 	return a + b	    		    
-c = add(3,7)	
-print c	  
+
+print  add(3,7)
 
 
 def sub(a, b):
 	return a - b
-d = sub(9, 6)
-print d
+
+print sub(9, 6)
 
 def mul(a, b):
 	return a * b
-e = mul(9,66)
-print e
+
+print  mul(9,66)
 
 def div(a, b):
 	return a/b
-f= div(9, 3)
-print f
 
-def	div(seconds, secondsinhr):
+print div(9, 3)
+
+def	sec(seconds, secondsinhr):
 	return seconds/secondsinhr
-hrs= div(86400, 3600)
+hrs= sec(86400, 3600)
 print hrs
 
-def mul(radius, radius1, pi):
+def ra(radius, radius1, pi):
 	return radius * radius1 * pi
-area= mul(5, 5, 3.14159265359)
+area= ra(5, 5, 3.14159265359)
 print area
 
-def mul(fourth, pi, radius, radius1, radius2):
+def pi_area(fourth, pi, radius, radius1, radius2):
 	return fourth * pi * radius * radius * radius
-volume = mul(4/3, 3.14159265359, 6, 6, 6)
+volume = pi_area(4/3, 3.14159265359, 6, 6, 6)
 print volume
 
-def mul(fourth, pi, radius, radius1, radius2):
+def vol10(fourth, pi, radius, radius1, radius2):
 	return fourth * pi * radius * radius * radius
-volume10 = mul(4/3, 3.14159265359, 10, 10, 10)
+volume10 = vol10(4/3, 3.14159265359, 10, 10, 10)
 def mul(fourth, pi, radius, radius1, radius2):
 	return fourth * pi * radius * radius * radius
 volume20 = mul(4/3, 3.14159265359, 20, 20, 20)
 
 def div(volume10, volume20, half):
 	return ((volume10 + volume20)/half)
-avgvolume = div( float(volume10), float(volume20), 2)
+= avgvol( float(volume10), float(volume20), 2)
 print avgvolume
 
 def div(a, b, c, half):
 	return ((a + b + c) / half)
 ze = div(1, 2, 2.5, 2)
-def area(a,b,c):
+def areacir(a,b,c):
 	x = (a + b + c)/2
 	return math.sqrt(x*(x-a)*(x-b)*(x-c))
-print area(1,2,2.5)
+print areacir(1,2,2.5)
 
 def hi_right(word):
-	return str ((80-len(word))*" " + word)
+	return str ((75-len(word))*" " + word)
 print hi_right("Hello")
 
 def hi_mid(term):
@@ -68,7 +68,29 @@ def msg(word):
 print msg("Hello")
 print msg("I eat cats!")
 
+a = add(3,7)
+b = sub(9, 6)
+c = mul(9,66)
+d = div(9, 3)
+e = sec(86400, 3600)
+f = ra(5, 5, 3.14159265359)
+g = pi_area(4/3, 3.14159265359, 6, 6, 6)
+h = avgvolume( float(volume10), float(volume20), 2)
+i = areacir(1,2,2.5)
+j = hi_right("Hello")
+k = hi_mid("Hello")
 
+print msg_box(str(a))
+print msg_box(str(b))
+print msg_box(str(c))
+print msg_box(str(d))
+print msg_box(str(e))
+print msg_box(str(f))
+print msg_box(str(g))
+print msg_box(str(h))
+print msg_box(str(i))
+print msg_box(str(j))
+print msg_box(str(k))
 
 
 
