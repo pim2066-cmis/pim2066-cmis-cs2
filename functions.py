@@ -22,34 +22,27 @@ print div(9, 3)
 
 def	sec(seconds, secondsinhr):
 	return seconds/secondsinhr
-hrs= sec(86400, 3600)
-print hrs
+sec(86400, 3600)
+print sec(86400, 3600) 
 
 def ra(radius, radius1, pi):
 	return radius * radius1 * pi
-area= ra(5, 5, 3.14159265359)
-print area
+ra(5, 5, 3.14159265359)
+print ra(5, 5, 3.14159265359)
 
 def pi_area(fourth, pi, radius, radius1, radius2):
 	return fourth * pi * radius * radius * radius
-volume = pi_area(4/3, 3.14159265359, 6, 6, 6)
-print volume
+pi_area(4/3, 3.14159265359, 6, 6, 6)
+print pi_area(4/3, 3.14159265359, 6, 6, 6)
 
-def vol10(fourth, pi, radius, radius1, radius2):
-	return fourth * pi * radius * radius * radius
-volume10 = vol10(4/3, 3.14159265359, 10, 10, 10)
-def mul(fourth, pi, radius, radius1, radius2):
-	return fourth * pi * radius * radius * radius
-volume20 = mul(4/3, 3.14159265359, 20, 20, 20)
-
-def div(volume10, volume20, half):
-	return ((volume10 + volume20)/half)
-= avgvol( float(volume10), float(volume20), 2)
-print avgvolume
+def avg_volume (a, b):
+	 return ((1.0/6 * math.pi * a**3) + (1.0/6 * math.pi * b**3)) /2
+print avg_volume(10, 20)
 
 def div(a, b, c, half):
 	return ((a + b + c) / half)
-ze = div(1, 2, 2.5, 2)
+print tri_area(1, 2, 2.5, 2)
+
 def areacir(a,b,c):
 	x = (a + b + c)/2
 	return math.sqrt(x*(x-a)*(x-b)*(x-c))
@@ -73,12 +66,13 @@ b = sub(9, 6)
 c = mul(9,66)
 d = div(9, 3)
 e = sec(86400, 3600)
-f = ra(5, 5, 3.14159265359)
+f = tri_area(1, 2, 2.5, 2)
 g = pi_area(4/3, 3.14159265359, 6, 6, 6)
-h = avgvolume( float(volume10), float(volume20), 2)
+h = avg_volume(10, 20)
 i = areacir(1,2,2.5)
-j = hi_right("Hello")
-k = hi_mid("Hello")
+j = ra(5, 5, 3.14159265359)
+k = hi_right("Hello")
+l = hi_mid("Hello")
 
 print msg_box(str(a))
 print msg_box(str(b))
