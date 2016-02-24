@@ -24,13 +24,15 @@ def ra(radius, radius1, pi):
 	return radius * radius1 * pi
 print ra(5, 5, 3.14159265359)
 
-def pi_area(fourth, pi, radius, radius1, radius2):
-	return fourth * pi * radius * radius * radius
-print pi_area(4/3, 3.14159265359, 6, 6, 6)
+def pi_area(radius):
+	return 4/3.0 * math.pi * radius**3
+print pi_area(5)
 
-def avg_volume (a, b):
-	 return ((1.0/6 * math.pi * a**3) + (1.0/6 * math.pi * b**3)) /2
-print avg_volume(10, 20)
+def avg_volume (d1,d2):
+    vs1 = pi_area(d1/2)
+    vs2 = pi_area(d2/2)
+    return (vs1+vs2)/2
+print avg_volume
 
 def tri_area(a, b, c, half):
 	return ((a + b + c) / half)
