@@ -1,6 +1,6 @@
 import random
 #variables:
-#	mimimum_num
+#	minimum_num
 #	maximum_num
 #	estimate
 #	guess
@@ -12,29 +12,8 @@ import random
 
 
 #Equation to find the difference when guess is under the real num
-def cal_guess_greater(guess, realNum):
-	greater = guess - realNum
-
-def cal_guess_less(guess, realNum):
-	less = realNum - guess
-
-def guessNreal(guess, realNum):
-	realNum = random.random()
-	if guess > realNum:
-		return True
-	else:
-		return False
-
-
-def cal_guess(guess, realNum):
-	if result == True:
-		calculation = greater
-	else:
-		calculation = less
-	return """The target was {}.
-Your guess was {}.
-That's under by {}.""".format(realNum, guess, calculation)
-	print
+def cal(realNum, guess):
+    result = abs(realNum - guess)
 
 def main():
 	minimum_num = raw_input("What is the minimun number?: ")
@@ -43,10 +22,27 @@ def main():
 	estimate = raw_input("""I'm thinking of a number from {} to {}""".format(minimum_num, maximum_num))
 
 	guess = raw_input("What do you think it is?: ")
-	print 
 
+    realNum = random.random()
 
+    if guess == realNum:
+        print """
+The target was {}.
+Your guess was {}.
+That's correct! You must be psychic!
+""" .format(guess, realNum)
 
+    elif guess > realNum :
+		print """
+The target was {}.
+Your guess was {}.
+That's under by {}.
+""" .format(realNum,guess, result)
 
 main()
+
+
+
+
+
 
