@@ -24,9 +24,9 @@
 #problem1_d) 5
 #
 #problem2_a) True
-#problem2_b) True
+#problem2_b) False
 #problem2_c) False
-#problem2_d) False
+#problem2_d) True
 #
 #problem3_a) 0.3
 #problem3_b) 0.5
@@ -46,3 +46,37 @@
 #If they don't, it should print a message telling them they didn't follow 
 #the directions.
 #Be sure to use the program structure you've learned (main function, processing function, output function)
+
+
+def process(a ,b, c):
+	if a > b and a > c:
+		return a 
+	elif b > a and b > c:
+		return b
+	elif c > a and c > b:    
+		return c
+	else:
+		return False
+#function for comparing the numbers
+
+def main():
+	type_num = raw_input("Type in three different numbers")
+	int_1 = raw_input("A: ")
+	int_2 = raw_input("B: ")
+	int_3 = raw_input("C: ")
+#int stands for the interger that will be typed into
+
+	result = "The largest number is {}". format(process)
+	
+	print output(result)
+
+def output(result):
+	if result == False:
+		print "You didn't follow instructions"
+ 	else:
+		print "The largest number is {}". format(process(a ,b, c)) 
+
+main()
+
+
+
