@@ -21,7 +21,7 @@
 #problem1_a) 36
 #problem1_b) square root of 3
 #problem1_c) 0
-#problem1_d) 5
+#problem1_d) 5 (wrong)
 #
 #problem2_a) True
 #problem2_b) False

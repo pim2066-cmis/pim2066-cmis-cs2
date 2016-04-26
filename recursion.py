@@ -1,13 +1,15 @@
-def countup(n):
-	if n >= 10:
-		print "TEN"
+def countup(start,stop):
+	if start >= stop:
+		print "BOOM!!"
 	else:
-		print n
-		countup(n+1)
+		print start
+		countup(start+1)
 
 def main():
-	countup(2)
+	start = int(raw_input("Start: "))
+	stop = int(raw_input("Stop: "))
 
+	countup(start,stop)
 	return
 
 main()
