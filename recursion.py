@@ -1,4 +1,4 @@
-"""def countup(start,stop):
+def countup(start,stop):
 	if start >= stop:
 		print "BOOM!!"
 	else:
@@ -66,7 +66,7 @@ def biggest(big = 0):
 		big = number_1
 		biggest(big)
 
-biggest()"""
+biggest()
 
 
 def biggest(big = float('inf')):
