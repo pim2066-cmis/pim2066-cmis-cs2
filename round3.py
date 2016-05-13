@@ -71,6 +71,8 @@ Starting round Two"""
 	print """
 Starting round Three"""
 	round_third()
+	print """
+End Gme! """
 			
 		
 

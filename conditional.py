@@ -35,11 +35,10 @@ def safe():
 What do you choose [type A, B, or C]: """)
 	if help == "A":
 		print sub_story1
-		den()
+		exit()
 	elif help == "B":
 		print """
 You rushed in to help the kit and took a friend of yours to help too. You started to swim to the den with water dragging you down. Suddently a huge log hit you across your muzzle but because your friend was there he helped you to swim to the den."""
-		den()
 	elif help == "C":
 		print """
 The kit dies and you were called a coward for the rest of your life"""
@@ -97,19 +96,25 @@ C. Near the road"""
 You head to the Sunning Rocks. Choosing this location means you having a risk of getting bitten by snakes that are hidden in the cracks of the rocks"""
 		point_4 = 25
 		return point_4
+		score()
 	elif decision == "B":
 		print """
 You head to the Forest. Choosing this location means you have a great advantage of hunting plump preys because the forest's lushed bushes helps you camonflage."""
 		point_4 = 35
 		return point_4
+		score()
 	elif decision == "C":
 		print """
 You head to the road. Choosing this location means that the preys will be scared away from the loud noises and foul smell of burning tires and car engine."""
 		point_4 = 10
 		return point_4	
+		score()
 
-def exit():
-	print "Good Game"
+
+def score():
+	score = location(point_4)	
+	final_score = """You reseive the score of {} out of thirty five""".format(score)
+
 
 		
 def main():
@@ -125,14 +130,12 @@ def main():
 	hunt()
 	location()
 	exit()
+	score()
 
-	score1 = safe()
-	score2 = den()	
-	score3 = hunt()
-	score4 = location()
+	print final_score
 
-	final_score = int(score1) + int(score2) + int(score3) + int(score4)
-	final = """Your final score is {} out of""".format(final_score)
+	
+
 
 
 
