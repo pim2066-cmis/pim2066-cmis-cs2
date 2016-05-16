@@ -94,26 +94,18 @@ C. Near the road"""
 	if decision == "A":
 		print """
 You head to the Sunning Rocks. Choosing this location means you having a risk of getting bitten by snakes that are hidden in the cracks of the rocks"""
-		point_4 = 25
-		return point_4
-		score()
+		point_4 = float(25)
+		print """You reseive the score of {} out of thirty five""".format(point_4)
 	elif decision == "B":
 		print """
 You head to the Forest. Choosing this location means you have a great advantage of hunting plump preys because the forest's lushed bushes helps you camonflage."""
-		point_4 = 35
-		return point_4
-		score()
+		point_4 = float(35)
+		print """You reseive the score of {} out of thirty five""".format(point_4)
 	elif decision == "C":
 		print """
 You head to the road. Choosing this location means that the preys will be scared away from the loud noises and foul smell of burning tires and car engine."""
-		point_4 = 10
-		return point_4	
-		score()
-
-
-def score():
-	score = location(point_4)	
-	final_score = """You reseive the score of {} out of thirty five""".format(score)
+		point_4 = float(10)
+		print """You reseive the score of {} out of thirty five""".format(point_4)
 
 
 		
@@ -128,11 +120,11 @@ def main():
 	safe()
 	den()
 	hunt()
-	location()
 	exit()
-	score()
 
-	print final_score
+	print """Good Game!"""
+	
+
 
 	
 
