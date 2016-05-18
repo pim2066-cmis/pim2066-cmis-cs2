@@ -39,12 +39,10 @@ What do you choose [type A, B, or C]: """)
 		print sub_story1
 		exit()
 	elif help == "B":
-		print """
-You rushed in to help the kit and took a friend of yours to help too. You started to swim to the den with water dragging you down. Suddently a huge log hit you across your muzzle but because your friend was there he helped you to swim to the den."""
+		return "B"
 	elif help == "C":
-		print """
-The kit dies and you were called a coward for the rest of your life"""
-		hunt()
+		return "C"
+		
 
 #DEN
 def den():
@@ -140,6 +138,17 @@ def main():
 	print urCharacter
 
 	safe()
+	
+	help_1 = safe()
+	
+	if help_1 == "C"
+		print """
+The kit dies and you were called a coward for the rest of your life"""
+		hunt()
+	elif help_1 == "B"
+		print """
+You rushed in to help the kit and took a friend of yours to help too. You started to swim to the den with water dragging you down. Suddently a huge log hit you across your muzzle but because your friend was there he helped you to swim to the den."""
+		exit()
 	den()
 	
 	if den() == True:
@@ -149,11 +158,10 @@ def main():
 	
 	if location():
 		point = location()
-		if point >= 35:
-			print """You reseive the score of {0} out of thirty five. You got first place!""".format(point)
+		if point <= 35:
+			print """You reseive the score of {0} out of thirty five.""".format(point)	
 		else:
-			print """You reseive the score of {0} out of thirty five.""".format(point)
-			
+			print """You reseive the score of {0} out of thirty five. You got first place!""".format(point)
 	else:
 		print """ You didn't follow instructions""" 
 	
@@ -163,14 +171,6 @@ def main():
 	
 
 	print """Good Game!"""
-	
-
-
-	
-
-
-
-
 	
 
 
