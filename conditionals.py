@@ -13,6 +13,8 @@ gender = ["female", "male"]
 ur_gender = random.choice(gender)
 name = ["Tom", "Bob", "Princess", "Jake", "Snow", "John", "Jacky"]
 ur_name = random.choice(name)
+age = random.randint(2,15)
+experience = random.random()
 
 #variable for types
 
@@ -33,7 +35,7 @@ def safe():
 	print story1
 	help = raw_input("""
 What do you choose [type A, B, or C]: """)
-	if help == "A":
+	if help == "A" and help != "B":
 		print sub_story1
 		exit()
 	elif help == "B":
@@ -55,13 +57,11 @@ B. Dig a hole up top"""
 	if life == "A":
 		print	"""
 You drown while trying to get into the entrance because you got tangled with the twigs. END GAME"""
-		return True
-		exit()
+		return False
 	else:
 		print """
 You and your friend help dig a hole from the top of the entrance and sucessfully helped the kitten out"""
-		return False
-		hunt()
+		return True
 
 
 #HUNT
@@ -73,54 +73,94 @@ Yes
 No"""
 	join = raw_input("Your decision (yes or no): ")
 
-	if join == "yes":
+	if join != "no":
 		print """
 Let the game begin!!"""
 		location()
-	elif join == "no":
+	else:
 		print """
 You just watch and observe the game while the participants are having fun."""
 		exit()
 
 #LOCATION
-def location():
+def location(point_4):
 	print """
 Where do you choose to hunt in the territory? Sunning Rocks, in the forest, near the road?
 
 A. Sunning Rocks
-B. Forest
-C. Near the road"""
+B. Forest 
+C. Near the road
+D. Near pine trees"""
 	decision = raw_input("Where would you like to hunt? (A, B, C): ")
-	if decision == "A":
+	point_4 = 0
+	if decision == "A" not decision == "c":
 		print """
 You head to the Sunning Rocks. Choosing this location means you having a risk of getting bitten by snakes that are hidden in the cracks of the rocks"""
-		point_4 = float(25)
-		print """You reseive the score of {} out of thirty five""".format(point_4)
-	elif decision == "B":
+		point_4 += float(25)
+		return point_4
+	elif decision == "B" or decision == "D":
 		print """
 You head to the Forest. Choosing this location means you have a great advantage of hunting plump preys because the forest's lushed bushes helps you camonflage."""
-		point_4 = float(35)
-		print """You reseive the score of {} out of thirty five""".format(point_4)
-	elif decision == "C":
+		point_4 += float(50)
+		return point_4
+	else:
 		print """
 You head to the road. Choosing this location means that the preys will be scared away from the loud noises and foul smell of burning tires and car engine."""
-		point_4 = float(10)
-		print """You reseive the score of {} out of thirty five""".format(point_4)
-
-
+		point_4 += float(10)
+		return point_4
+		
+def fin():
+	print """
+	You've done most of your job and did a good job in them. Now choose your dream as a role in your clan
+	A. Be the next deputy
+	B. Be the leader
+	C. Be the medicine cat
+	D. Be a normal warrior""""
+	
+	dream = raw_input("What do you choose?: ")
+	
+	if dream == "A" or dream == "B" or dream == "C" :
+		print """You will be likely to be them if you work hard.... Continue on part 2...."""
+	
+def final():
+	points = location(point_4)
+	if point_4 >= 20:
+		print """Good job, seems like you're a pro hunter"""
+	
+	
 		
 def main():
 	urCharacter = """We have chosen your character and your name is {}. Here is what you look like (vaguely)
 	Fur Color: {}
 	Hybrid: {}
 	Eye Color: {}
-	Gender: {}""".format(ur_name, ur_fur, ur_hybrid, ur_eyes, ur_gender)
+	Gender: {}
+	Age: {}
+	Experience points: {}""".format(ur_name, ur_fur, ur_hybrid, ur_eyes, ur_gender, age, experience)
 	print urCharacter
 
 	safe()
 	den()
-	hunt()
+	
+	if den() == True:
+		hunt()
+	else:
+		exit()
+	
+	if location():
+		point = location()
+		if point >= 35:
+			print """You reseive the score of {0} out of thirty five. You got first place!""".format(point)
+		else:
+			print """You reseive the score of {0} out of thirty five.""".format(point)
+			
+	else:
+		print """ You didn't follow instructions""" 
+	
+	final()
 	exit()
+	fin()
+	
 
 	print """Good Game!"""
 	
