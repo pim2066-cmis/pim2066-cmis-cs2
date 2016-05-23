@@ -39,11 +39,20 @@ What do you choose [type A, B, or C]: """)
 		print sub_story1
 		exit()
 	elif help == "B":
-		return "B"
+		return B
 	elif help == "C":
-		return "C"
+		return C
 		
-
+def return_str():
+	returning = safe()
+	if returning == C:
+		print """
+The kit dies and you were called a coward for the rest of your life"""
+		hunt()
+	elif returning == B:
+		print """
+You rushed in to help the kit and took a friend of yours to help too. You started to swim to the den with water dragging you down. Suddently a huge log hit you across your muzzle but because your friend was there he helped you to swim to the den."""
+		exit()
 #DEN
 def den():
 	print """
@@ -52,7 +61,7 @@ Do you choose to go into the den by creating a hole from the top or go under the
 A. Through the entrance
 B. Dig a hole up top"""
 	life = raw_input("Which do you choose?(A or B): ")
-	if life == "A":
+	if not life == "B" and life == "C":
 		print	"""
 You drown while trying to get into the entrance because you got tangled with the twigs. END GAME"""
 		return False
@@ -60,6 +69,13 @@ You drown while trying to get into the entrance because you got tangled with the
 		print """
 You and your friend help dig a hole from the top of the entrance and sucessfully helped the kitten out"""
 		return True
+
+def result():
+	T_or_F = den()
+	if T_or_F == True:
+		hunt()
+	else:
+		exit()
 
 
 #HUNT
@@ -91,7 +107,7 @@ C. Near the road
 D. Near pine trees"""
 	decision = raw_input("Where would you like to hunt? (A, B, C): ")
 	point_4 = 0
-	if decision == "A" not decision == "c":
+	if decision == "A" and decision == "C":
 		print """
 You head to the Sunning Rocks. Choosing this location means you having a risk of getting bitten by snakes that are hidden in the cracks of the rocks"""
 		point_4 += float(25)
@@ -106,6 +122,9 @@ You head to the Forest. Choosing this location means you have a great advantage 
 You head to the road. Choosing this location means that the preys will be scared away from the loud noises and foul smell of burning tires and car engine."""
 		point_4 += float(10)
 		return point_4
+
+
+
 		
 def fin():
 	print """
@@ -113,17 +132,12 @@ def fin():
 	A. Be the next deputy
 	B. Be the leader
 	C. Be the medicine cat
-	D. Be a normal warrior""""
+	D. Be a normal warrior"""
 	
 	dream = raw_input("What do you choose?: ")
 	
 	if dream == "A" or dream == "B" or dream == "C" :
 		print """You will be likely to be them if you work hard.... Continue on part 2...."""
-	
-def final():
-	points = location(point_4)
-	if point_4 >= 20:
-		print """Good job, seems like you're a pro hunter"""
 	
 	
 		
@@ -138,36 +152,14 @@ def main():
 	print urCharacter
 
 	safe()
-	
-	help_1 = safe()
-	
-	if help_1 == "C"
-		print """
-The kit dies and you were called a coward for the rest of your life"""
-		hunt()
-	elif help_1 == "B"
-		print """
-You rushed in to help the kit and took a friend of yours to help too. You started to swim to the den with water dragging you down. Suddently a huge log hit you across your muzzle but because your friend was there he helped you to swim to the den."""
-		exit()
 	den()
-	
-	if den() == True:
-		hunt()
-	else:
-		exit()
-	
-	if location():
-		point = location()
-		if point <= 35:
-			print """You reseive the score of {0} out of thirty five.""".format(point)	
-		else:
-			print """You reseive the score of {0} out of thirty five. You got first place!""".format(point)
-	else:
-		print """ You didn't follow instructions""" 
-	
-	final()
 	exit()
-	fin()
+
+	val_location = location()
+	point = location()
+	if val_locationint >= 35:
+		print """You reseive the score of {0} out of thirty five. You got first place!""".format(point)
+	
 	
 
 	print """Good Game!"""
