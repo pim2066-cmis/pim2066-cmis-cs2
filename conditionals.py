@@ -39,17 +39,17 @@ What do you choose [type A, B, or C]: """)
 		print sub_story1
 		exit()
 	elif help == "B":
-		return B
+		return help
 	elif help == "C":
-		return C
+		return help
 		
 def return_str():
 	returning = safe()
-	if returning == C:
+	if returning == "C":
 		print """
 The kit dies and you were called a coward for the rest of your life"""
 		hunt()
-	elif returning == B:
+	elif returning == "B":
 		print """
 You rushed in to help the kit and took a friend of yours to help too. You started to swim to the den with water dragging you down. Suddently a huge log hit you across your muzzle but because your friend was there he helped you to swim to the den."""
 		exit()
@@ -70,6 +70,7 @@ You drown while trying to get into the entrance because you got tangled with the
 You and your friend help dig a hole from the top of the entrance and sucessfully helped the kitten out"""
 		return True
 
+#RESULT
 def result():
 	T_or_F = den()
 	if T_or_F == True:
@@ -90,14 +91,14 @@ No"""
 	if join != "no":
 		print """
 Let the game begin!!"""
-		location()
+		
 	else:
 		print """
 You just watch and observe the game while the participants are having fun."""
 		exit()
 
 #LOCATION
-def location(point_4):
+def location():
 	print """
 Where do you choose to hunt in the territory? Sunning Rocks, in the forest, near the road?
 
@@ -106,26 +107,29 @@ B. Forest
 C. Near the road
 D. Near pine trees"""
 	decision = raw_input("Where would you like to hunt? (A, B, C): ")
-	point_4 = 0
+	
 	if decision == "A" and decision == "C":
 		print """
 You head to the Sunning Rocks. Choosing this location means you having a risk of getting bitten by snakes that are hidden in the cracks of the rocks"""
-		point_4 += float(25)
-		return point_4
+		return 25
 	elif decision == "B" or decision == "D":
 		print """
 You head to the Forest. Choosing this location means you have a great advantage of hunting plump preys because the forest's lushed bushes helps you camonflage."""
-		point_4 += float(50)
-		return point_4
+		return 50
 	else:
 		print """
 You head to the road. Choosing this location means that the preys will be scared away from the loud noises and foul smell of burning tires and car engine."""
-		point_4 += float(10)
-		return point_4
+		return 10
 
+#END
+def ending():
+	val_location = location()
+	if val_location > 35:
+		print """You reseive the score of {0} out of thirty five. You got first place!""".format(val_location)
 
+	print """Good Game!"""
 
-		
+#FIN	
 def fin():
 	print """
 	You've done most of your job and did a good job in them. Now choose your dream as a role in your clan
@@ -139,7 +143,7 @@ def fin():
 	if dream == "A" or dream == "B" or dream == "C" :
 		print """You will be likely to be them if you work hard.... Continue on part 2...."""
 	
-	
+
 		
 def main():
 	urCharacter = """We have chosen your character and your name is {}. Here is what you look like (vaguely)
@@ -152,17 +156,15 @@ def main():
 	print urCharacter
 
 	safe()
-	den()
+	location()
+	result()
+	ending()
+	fin()	
 	exit()
-
-	val_location = location()
-	point = location()
-	if val_locationint >= 35:
-		print """You reseive the score of {0} out of thirty five. You got first place!""".format(point)
-	
+		
 	
 
-	print """Good Game!"""
+
 	
 
 
