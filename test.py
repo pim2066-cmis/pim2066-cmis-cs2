@@ -44,17 +44,17 @@
 def add(a):
 	if a > 0:
 		while a > 0:
-			a += 1
+			a -= 1
 			if a % 2 != 0:
 				while a % 2 == 0:
 					a += a
 					print a
 	elif a < 0:
 		while a < 0:
-			a -= 1
+			a += 1
 			if a % 2 != 0:
 				while a % 2 != 0:
-					a -= a
+					a += a
 					print a
 add(90)
 
