@@ -42,21 +42,27 @@
 #count(11,6)
 
 def add(a):
+	sum = 0
 	if a > 0:
-		while a > 0:
-			a -= 1
-			if a % 2 != 0:
-				while a % 2 == 0:
-					a += a
-					print a
+		while a > 0:	
+			if a % 2 == 1:
+				sum += a
+			n -= 1
+
 	elif a < 0:
 		while a < 0:
-			a += 1
-			if a % 2 != 0:
-				while a % 2 != 0:
-					a += a
-					print a
-add(90)
+			if a % 2 == 1:
+				sum += a	
+			n += 1
+	return sum
+
+def grid(w, h):
+	out = " "
+	while h != 0:
+		print "." * w
+		h-=1
+
+print grid(10,10)
 
 				
 

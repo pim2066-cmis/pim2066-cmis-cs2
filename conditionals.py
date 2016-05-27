@@ -125,7 +125,8 @@ You head to the road. Choosing this location means that the preys will be scared
 def ending():
 	val_location = location()
 	if val_location > 35:
-		print """You reseive the score of {0} out of thirty five. You got first place!""".format(val_location)
+		print """
+You reseive the score of {0} out of thirty five. You got first place!""".format(val_location)
 
 	print """Good Game!"""
 
@@ -156,7 +157,7 @@ def main():
 	print urCharacter
 
 	safe()
-	location()
+	
 	result()
 	ending()
 	fin()	
